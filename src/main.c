@@ -60,7 +60,8 @@ int main() {
   GPIOB_ModeCfg(GPIO_Pin_4, GPIO_ModeOut_PP_5mA);  // led
 
   // 测试demo，一个程序只能打开一条测试demo，进入测试demo后将进入死循环，不会返回了
-#if 0
+  
+#if 1
   ExampleLLCC68ReciveDemo();  // 循环接收demo
 #else
   ExampleLLCC68SendDemo();  // 定时发送demo
