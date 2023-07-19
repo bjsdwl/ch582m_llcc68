@@ -44,7 +44,8 @@ void LLCC68IoInit(void) {
  */
 void LLCC68IoIrqInit(DioIrqHandler dioIrq) {
   dio1IrqCallback = dioIrq;
-  GPIOA_ModeCfg(RADIO_DIO1_PIN, GPIO_ModeIN_PU);
+  // GPIOA_ModeCfg(RADIO_DIO1_PIN, GPIO_ModeIN_PU);
+  GPIOA_ModeCfg(RADIO_DIO1_PIN, GPIO_ModeIN_PD);
   GPIOA_ITModeCfg(RADIO_DIO1_PIN, GPIO_ITMode_RiseEdge);
   PFIC_EnableIRQ(GPIO_A_IRQn);
 }
